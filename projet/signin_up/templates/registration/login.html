@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css_resouce %} {% static 'signin_up/css/css.css' %} {% endblock %}
+{% block title %}Login{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+
+
+<form method="post"  id="connexion">
+<h2>Login</h2>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Se Connecter</button>
+  <a href="http://127.0.0.1:8000/projet/password_reset/">Mot de passe oublié?</a>
+</form>
+{% endblock %}
